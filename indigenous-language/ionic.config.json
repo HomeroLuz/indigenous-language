@@ -1,0 +1,7 @@
+{
+  "name": "indigenous-language",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
