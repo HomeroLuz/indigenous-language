@@ -1,7 +1,8 @@
 {
   "name": "indigenous-language",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

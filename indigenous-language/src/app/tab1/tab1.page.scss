@@ -1,0 +1,22 @@
+@import '~@angular/material/theming';
+
+$custom-typography: mat-typography-config(
+    $font-family: "monospace",
+);
+
+@include mat-core($custom-typography);
+
+//Esto modifica los colores del tema
+$app-primary: mat-palette($mat-indigo, 200);
+$app-accent: mat-palette($mat-blue, 900);
+$app-warn: mat-palette($mat-orange, A700);
+
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+@include angular-material-theme($app-theme);
+
+
+.contentCenter {
+    align-content: center;
+    text-align: center;
+}

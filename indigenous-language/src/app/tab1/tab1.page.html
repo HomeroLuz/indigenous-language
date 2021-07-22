@@ -1,7 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <!-- <ion-buttons slot="start">
+      <ion-button (click)="showMenu()" color="primary">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first" color="primary"></ion-menu-button>
+    </ion-buttons>
+
+    
     <ion-title>
-      Tab 1
+      IndLex
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +24,50 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col size="5"></ion-col>
+      <ion-col>
+        <ion-button (click)="RecordAudio()" expand="block" fill="clear" shape="round">
+          <ion-icon name="mic-outline" color="primary"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="StopRecording()" expand="block" fill="clear" shape="round">
+          <ion-icon name="stop-circle-outline" color="danger"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="5"></ion-col>
+    </ion-row>
+  </ion-grid> -->
+
+  <ion-card>
+    <div class="contentCenter">
+      <ion-card-header>
+        <!-- <ion-card-subtitle>Foreing Word</ion-card-subtitle> -->
+        <ion-card-title>Foreing_Word</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <img src="..\assets\icon\img-0.png" width="300" height="300"/><br/>
+        <!-- <img src="..\assets\icon\img-0.png" class="imgCard"/><br/> -->
+        <ion-text color="primary">
+          <h4>{{status}}</h4>
+        </ion-text>
+
+        <ion-button (click)="RecordAudio()" fill="clear" shape="round">
+          <ion-icon name="mic-outline" color="primary"></ion-icon>
+        </ion-button>
+
+        <ion-button (click)="StopRecording()" fill="clear" shape="round">
+          <ion-icon name="stop-circle-outline" color="danger"></ion-icon>
+        </ion-button>
+
+        <br/>
+        <ion-label>Traduzca</ion-label>
+        <ion-input></ion-input>
+      </ion-card-content>
+    </div>
+  </ion-card>
+
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 </ion-content>
