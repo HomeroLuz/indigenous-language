@@ -1,7 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
+    <!-- <ion-title>
       Acerca de
+    </ion-title> -->
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first" color="primary"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>
+      IndLex - play-delete audio
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +21,77 @@
     </ion-toolbar>
   </ion-header>
 
+  <ion-card>
+    <div class="contentCenter">
+      <ion-card-header>
+        <ion-card-title>Foreing_Word</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <img src="..\assets\icon\img-0.png" width="300" height="300"/><br/>
+        <ion-text color="primary">
+          <h4>{{status}}</h4>
+        </ion-text>
+
+        <ion-grid class="ion-float-sm-left">
+          <ion-row>
+            <ion-col>
+              <div *ngIf="isAudioRecording === false">
+                <ion-button (click)="recordAudio()" fill="clear" shape="round">
+                  <ion-icon name="mic-outline" color="primary"></ion-icon>
+                </ion-button>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div *ngIf="isAudioRecording === true">
+                <ion-button (click)="stopRecording()" fill="clear" shape="round">
+                  <ion-icon name="stop-circle-outline" color="danger"></ion-icon>
+                </ion-button>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div *ngIf="isCreateFileAudio === true">
+                <ion-button (click)="playAudioFile(f)" fill="clear" shape="round">
+                  <ion-icon name="play-outline"></ion-icon>
+                </ion-button>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div *ngIf="isCreateFileAudio === true">
+                <ion-button (click)="deleteFile()" fill="clear" shape="round" color="danger">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </ion-button>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+       <!--  <div *ngIf="isAudioRecording === false">
+          <ion-button (click)="RecordAudio()" fill="clear" shape="round">
+            <ion-icon name="mic-outline" color="primary"></ion-icon>
+          </ion-button>
+        </div>
+
+        <div *ngIf="isAudioRecording === true">
+          <ion-button (click)="StopRecording()" fill="clear" shape="round">
+            <ion-icon name="stop-circle-outline" color="danger"></ion-icon>
+          </ion-button>
+        </div> -->
+
+        <!-- **************** play audio ************************* -->
+        <!-- <ion-button (click)="PlayAudioFile()" fill="clear" shape="round">
+          <ion-icon name="play-outline"></ion-icon>
+        </ion-button> -->
+        <!-- **************** play audio ************************* -->
+
+        <br/>
+        <ion-item-divider>
+          <ion-label>Traduzca</ion-label>
+          <ion-input></ion-input>
+        </ion-item-divider>
+        
+      </ion-card-content>
+    </div>
+  </ion-card>
+
   <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
 </ion-content>
+  
